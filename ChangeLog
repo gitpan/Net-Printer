@@ -1,4 +1,81 @@
-2001-03-11  Chris Fuhrman  <cfuhrman@alleyn.beartribe.org>
+2003-02-13  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+
+	* TODO:  - Added line about PRINTER environment variable
+
+	* test.pl:  - Added commented out test for printstring function
+
+	* Printer.pm:  - Added printstring function
+
+2003-02-12  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+
+	* TODO:
+	 - Only thing left to do that I can think of is failover to lpr/lp
+
+	* MANIFEST:  - Added README.v30
+
+	* README:
+	 - Removed pointer to COPYRIGHT.  People should read README.v30
+
+	* README.v30:  - Initial entry
+
+2003-02-12  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+
+	* TODO:
+	 - Only thing left to do that I can think of is failover to lpr/lp
+
+	* MANIFEST:  - Added README.v30
+
+	* README:
+	 - Removed pointer to COPYRIGHT.  People should read README.v30
+
+	* README.v30:  - Initial entry
+
+2003-02-10  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+
+	* COPYRIGHT:  - Added e-mail addy
+
+	* README:  - Updated with new version 0.30 information
+
+	* Printer.pm:  - Clean up top comments
+	 - Can use perl 5.005 although not yet tested
+	 - Implement queuestatus
+	 - printfile can now take filename as argument
+	 - Added destroy method
+	 - Added perl documentation for perldoc
+
+	* test.pl:  - Now support queuestatus
+
+2003-02-10  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+
+	* COPYRIGHT:  - Added e-mail addy
+
+	* README:  - Updated with new version 0.30 information
+
+	* Printer.pm:  - Clean up top comments
+	 - Can use perl 5.005 although not yet tested
+	 - Implement queuestatus
+	 - printfile can now take filename as argument
+	 - Added destroy method
+	 - Added perl documentation for perldoc
+
+	* test.pl:  - Now support queuestatus
+
+2003-02-10  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+
+	* COPYRIGHT:  - New copyright notice about dual-license
+
+	* MANIFEST:  - Update with latest files
+
+	* Printer.pm:  - New re-written version
+
+	* testprint.txt, Makefile.PL, COPYRIGHT.BSD, COPYRIGHT.GNU:
+	 - Initial entry
+
+	* TODO:  - Latest todo list
+
+	* test.pl:  - Initial entry
+
+2001-03-11  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
 
 	* CREDITS:  - Initial entry
 
@@ -10,7 +87,7 @@
 	 - Solve the sprintf problem.  $result from sysread can be returned as
 	   undef.  When it is we set it to 0. (Neil Lunn)
 
-2000-06-07  Chris Fuhrman  <cfuhrman@cfuhrman.ee.net>
+2000-06-07  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
 
 	* Printer.pm:  - Added note about sprintf problem
 
@@ -28,20 +105,11 @@
 
 	* TODO:  - Initial Entry based
 
-2000-06-06  Chris Fuhrman  <cfuhrman@cfuhrman.ee.net>
+2000-06-06  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
 
 	* Makefile.PL, README:  - Initial Entry
 
 	* MANIFEST, COPYRIGHT:  - Initial entry into repository
 
 	* Printer.pm:  - New revision replaces LinePrinter.pm module
-
-2000-06-06  Chris Fuhrman  <cfuhrman@cfuhrman.ee.net>
-
-	* Makefile.PL, README:  - Initial Entry
-
-	* MANIFEST, COPYRIGHT:  - Initial entry into repository
-
-	* Printer.pm:  - New revision replaces LinePrinter.pm module
-
 
