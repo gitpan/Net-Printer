@@ -1,7 +1,7 @@
 ########################################################################
 # File: Net::Printer
 #
-# $Id: Printer.pm 52 2004-11-27 18:36:23Z cfuhrman $
+# $Id: Printer.pm 57 2004-12-01 22:39:26Z cfuhrman $
 #
 # Chris Fuhrman <chris.fuhrman@tfcci.com>
 #
@@ -45,7 +45,7 @@ our @ISA = qw(Exporter);
 #our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
 our @EXPORT = qw( printerror printfile printstring queuestatus );
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 # ----------------------------------------------------------------------
 # Public Methods
@@ -530,7 +530,7 @@ sub _fileCreate {
 
     # Fill up hash
     $chash{'1H'} = $myname;
-    $chash{'2P'} = getpwent();
+    $chash{'2P'} = getlogin || getpwuid( $< ) || "nobody";
     $chash{'3J'} = $self->{filename};
     $chash{'4C'} = $myname;
     $chash{'5f'} = sprintf("dfA%03d%s",
