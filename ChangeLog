@@ -1,3 +1,15 @@
+2003-03-15  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+
+	* Printer.pm:
+	 - New function printerror in the event Net::Printer finds an error
+	 - Cleaned up debugging
+	 - Export functions properly
+	 - queuestatus is now more consistent in returning array
+
+2003-02-23  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+
+	* testprint.txt:  - A little humor...
+
 2003-02-20  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
 
 	* Printer.pm:  - Update version
