@@ -3,7 +3,7 @@
 # `make test'. After `make install' it should work as `perl test.pl'
 
 #
-# $Id: test.pl 53 2004-11-27 18:39:01Z cfuhrman $
+# $Id: test.pl 62 2005-03-20 16:47:05Z cfuhrman $
 #
 
 #########################
@@ -24,10 +24,10 @@ ok(1); # If we made it this far, we're ok.
 main : {
 
     $printer = Net::Printer->new( "lineconvert" => "Yes",
-				  "server"      => "localhost",
-				  "printer"     => "lp",
-				  "rfc1179"     => "No",
-				  "debug"       => "No");
+                                  "server"      => "localhost",
+                                  "printer"     => "lp",
+                                  "rfc1179"     => "No",
+                                  "debug"       => "No");
 
     ok( defined ($printer) );
 
@@ -36,8 +36,8 @@ main : {
     @status = $printer->queuestatus();
 
     foreach $line (@status) {
-	$line =~ s/\n//;
-	print "$line\n";
+        $line =~ s/\n//;
+        print "$line\n";
     }
 
     ok (defined @status);
