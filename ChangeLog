@@ -1,3 +1,19 @@
+2003-02-20  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+
+	* Printer.pm:  - Update version
+
+	* CREDITS:  - Added Matt Selsky
+
+2003-02-19  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+
+	* Printer.pm:  - Net::Printer definitely needs perl 5.6.0 or greater
+	 - Added rfc1179 compliance mode (thanks to selsky)
+	 - Removed extraneous whitespace in POD documentation
+	 - POD documentation clean-up
+
+	* test.pl:  - Fix potential name-space collision
+	 - Added rfc1179 default to "No"
+
 2003-02-13  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
 
 	* TODO:  - Added line about PRINTER environment variable
@@ -18,18 +34,6 @@
 
 	* README.v30:  - Initial entry
 
-2003-02-12  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
-
-	* TODO:
-	 - Only thing left to do that I can think of is failover to lpr/lp
-
-	* MANIFEST:  - Added README.v30
-
-	* README:
-	 - Removed pointer to COPYRIGHT.  People should read README.v30
-
-	* README.v30:  - Initial entry
-
 2003-02-10  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
 
 	* COPYRIGHT:  - Added e-mail addy
@@ -44,23 +48,6 @@
 	 - Added perl documentation for perldoc
 
 	* test.pl:  - Now support queuestatus
-
-2003-02-10  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
-
-	* COPYRIGHT:  - Added e-mail addy
-
-	* README:  - Updated with new version 0.30 information
-
-	* Printer.pm:  - Clean up top comments
-	 - Can use perl 5.005 although not yet tested
-	 - Implement queuestatus
-	 - printfile can now take filename as argument
-	 - Added destroy method
-	 - Added perl documentation for perldoc
-
-	* test.pl:  - Now support queuestatus
-
-2003-02-10  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
 
 	* COPYRIGHT:  - New copyright notice about dual-license
 
