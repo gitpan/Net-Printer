@@ -1,7 +1,7 @@
 To Do List for Net::Printer
 ---------------------------
 
-Last Modified: $Date: 2003/02/13 01:54:20 $
+Last Modified: $Date: 2003-02-12 20:54:20 -0500 (Wed, 12 Feb 2003) $
 
 * If connection to printer fails, try sending to lpr/lpd as last
   resort.  Make this option configurable (like Failover => "Yes") for

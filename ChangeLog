@@ -1,114 +1,269 @@
-2003-03-15  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+------------------------------------------------------------------------
+r54 | cfuhrman | 2004-11-27 13:49:17 -0500 (Sat, 27 Nov 2004) | 3 lines
 
-	* Printer.pm:
-	 - New function printerror in the event Net::Printer finds an error
-	 - Cleaned up debugging
-	 - Export functions properly
-	 - queuestatus is now more consistent in returning array
+ - Initial tag of Version 1.00
 
-2003-02-23  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
 
-	* testprint.txt:  - A little humor...
+------------------------------------------------------------------------
+r53 | cfuhrman | 2004-11-27 13:39:01 -0500 (Sat, 27 Nov 2004) | 1 line
 
-2003-02-20  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+- disable debuggery in test.pl
+------------------------------------------------------------------------
+r52 | cfuhrman | 2004-11-27 13:36:23 -0500 (Sat, 27 Nov 2004) | 4 lines
 
-	* Printer.pm:  - Update version
+ - Bump up to version 1.00
+ - Change Makefile dependencies and location of module
 
-	* CREDITS:  - Added Matt Selsky
 
-2003-02-19  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+------------------------------------------------------------------------
+r51 | cfuhrman | 2004-11-27 13:32:32 -0500 (Sat, 27 Nov 2004) | 3 lines
 
-	* Printer.pm:  - Net::Printer definitely needs perl 5.6.0 or greater
-	 - Added rfc1179 compliance mode (thanks to selsky)
-	 - Removed extraneous whitespace in POD documentation
-	 - POD documentation clean-up
+ - Switch to BSD license
 
-	* test.pl:  - Fix potential name-space collision
-	 - Added rfc1179 default to "No"
 
-2003-02-13  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+------------------------------------------------------------------------
+r50 | cfuhrman | 2004-11-27 13:27:55 -0500 (Sat, 27 Nov 2004) | 3 lines
 
-	* TODO:  - Added line about PRINTER environment variable
+ - To be replaced by BSD version
 
-	* test.pl:  - Added commented out test for printstring function
 
-	* Printer.pm:  - Added printstring function
+------------------------------------------------------------------------
+r49 | cfuhrman | 2004-11-27 13:27:38 -0500 (Sat, 27 Nov 2004) | 3 lines
 
-2003-02-12  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+ - We're in 2004 now
 
-	* TODO:
-	 - Only thing left to do that I can think of is failover to lpr/lp
 
-	* MANIFEST:  - Added README.v30
+------------------------------------------------------------------------
+r48 | cfuhrman | 2004-11-25 13:09:02 -0500 (Thu, 25 Nov 2004) | 5 lines
 
-	* README:
-	 - Removed pointer to COPYRIGHT.  People should read README.v30
+ - Re-organize code
+ - Clean-up
+ - Add section about CUPS printers to POD documentation
 
-	* README.v30:  - Initial entry
 
-2003-02-10  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+------------------------------------------------------------------------
+r47 | cfuhrman | 2004-11-25 11:58:59 -0500 (Thu, 25 Nov 2004) | 4 lines
 
-	* COPYRIGHT:  - Added e-mail addy
+ - Objectify Code.
+ - Change Debuggery
 
-	* README:  - Updated with new version 0.30 information
 
-	* Printer.pm:  - Clean up top comments
-	 - Can use perl 5.005 although not yet tested
-	 - Implement queuestatus
-	 - printfile can now take filename as argument
-	 - Added destroy method
-	 - Added perl documentation for perldoc
+------------------------------------------------------------------------
+r46 | cfuhrman | 2004-11-25 07:35:46 -0500 (Thu, 25 Nov 2004) | 12 lines
 
-	* test.pl:  - Now support queuestatus
+ - Use NaturalDocs markups in code
+ - Code sanitisatioin
+ - Debug now prints calling function and line number
+ - Begin to rename private functions using _functionName schema
+ - _logDebug & _lpdFatal are now more Object Oriented.
+ - We don't need the autoloader
+ - Move Printer.pm to sub directory
+ - test.pl now sets debug to "Yes"
+ - Note this revision marks the switch to Subversion for my source
+   control needs
 
-	* COPYRIGHT:  - New copyright notice about dual-license
 
-	* MANIFEST:  - Update with latest files
+------------------------------------------------------------------------
+r44 | cfuhrman | 2004-10-18 21:34:45 -0400 (Mon, 18 Oct 2004) | 3 lines
 
-	* Printer.pm:  - New re-written version
+ - Documentation clarification
 
-	* testprint.txt, Makefile.PL, COPYRIGHT.BSD, COPYRIGHT.GNU:
-	 - Initial entry
 
-	* TODO:  - Latest todo list
+------------------------------------------------------------------------
+r42 | cfuhrman | 2003-03-15 09:05:05 -0500 (Sat, 15 Mar 2003) | 5 lines
 
-	* test.pl:  - Initial entry
+ - New function printerror in the event Net::Printer finds an error
+ - Cleaned up debugging
+ - Export functions properly
+ - queuestatus is now more consistent in returning array
 
-2001-03-11  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+------------------------------------------------------------------------
+r41 | cfuhrman | 2003-02-23 10:28:56 -0500 (Sun, 23 Feb 2003) | 2 lines
 
-	* CREDITS:  - Initial entry
+ - A little humor...
 
-	* README:  - Added Cygwin Port (Neil Lunn)
+------------------------------------------------------------------------
+r39 | cfuhrman | 2003-02-20 05:59:14 -0500 (Thu, 20 Feb 2003) | 2 lines
 
-	* Printer.pm:
-	 - Checked the current OS for use of getpwdent().  This is a problem
-	   on non *nix architectures. (Neil Lunn)
-	 - Solve the sprintf problem.  $result from sysread can be returned as
-	   undef.  When it is we set it to 0. (Neil Lunn)
+ - Update version
 
-2000-06-07  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+------------------------------------------------------------------------
+r38 | cfuhrman | 2003-02-20 05:56:31 -0500 (Thu, 20 Feb 2003) | 2 lines
 
-	* Printer.pm:  - Added note about sprintf problem
+ - Added Matt Selsky
 
-	* README:  - Added Sun SPARC to list of tested machines.
-	 - Added BUGS section
+------------------------------------------------------------------------
+r37 | cfuhrman | 2003-02-18 21:06:28 -0500 (Tue, 18 Feb 2003) | 5 lines
 
-	* MANIFEST:  - Added TODO
+ - Net::Printer definitely needs perl 5.6.0 or greater
+ - Added rfc1179 compliance mode (thanks to selsky)
+ - Removed extraneous whitespace in POD documentation
+ - POD documentation clean-up
 
-	* TODO:  - Added sprintf comment
+------------------------------------------------------------------------
+r36 | cfuhrman | 2003-02-18 21:03:10 -0500 (Tue, 18 Feb 2003) | 3 lines
 
-	* Printer.pm:
-	 - Fixed bug where perl -w complains a blank string is being used with
-	   an ne (Not Equal To) operator.  Please note that a couple of
-	   sprintf's generate the same warning.
+ - Fix potential name-space collision
+ - Added rfc1179 default to "No"
 
-	* TODO:  - Initial Entry based
+------------------------------------------------------------------------
+r34 | cfuhrman | 2003-02-12 20:54:20 -0500 (Wed, 12 Feb 2003) | 2 lines
 
-2000-06-06  Chris Fuhrman  <cfuhrman@algonquin.beartribe.org>
+ - Added line about PRINTER environment variable
 
-	* Makefile.PL, README:  - Initial Entry
+------------------------------------------------------------------------
+r33 | cfuhrman | 2003-02-12 20:53:42 -0500 (Wed, 12 Feb 2003) | 2 lines
 
-	* MANIFEST, COPYRIGHT:  - Initial entry into repository
+ - Added commented out test for printstring function
 
-	* Printer.pm:  - New revision replaces LinePrinter.pm module
+------------------------------------------------------------------------
+r32 | cfuhrman | 2003-02-12 20:53:07 -0500 (Wed, 12 Feb 2003) | 2 lines
 
+ - Added printstring function
+
+------------------------------------------------------------------------
+r31 | cfuhrman | 2003-02-12 09:45:42 -0500 (Wed, 12 Feb 2003) | 2 lines
+
+ - Only thing left to do that I can think of is failover to lpr/lp
+
+------------------------------------------------------------------------
+r30 | cfuhrman | 2003-02-12 09:42:40 -0500 (Wed, 12 Feb 2003) | 2 lines
+
+ - Added README.v30
+
+------------------------------------------------------------------------
+r29 | cfuhrman | 2003-02-12 09:41:59 -0500 (Wed, 12 Feb 2003) | 2 lines
+
+ - Removed pointer to COPYRIGHT.  People should read README.v30
+
+------------------------------------------------------------------------
+r28 | cfuhrman | 2003-02-12 09:41:32 -0500 (Wed, 12 Feb 2003) | 2 lines
+
+ - Initial entry
+
+------------------------------------------------------------------------
+r26 | cfuhrman | 2003-02-10 13:38:04 -0500 (Mon, 10 Feb 2003) | 2 lines
+
+ - Added e-mail addy
+
+------------------------------------------------------------------------
+r25 | cfuhrman | 2003-02-10 13:37:56 -0500 (Mon, 10 Feb 2003) | 2 lines
+
+ - Updated with new version 0.30 information
+
+------------------------------------------------------------------------
+r24 | cfuhrman | 2003-02-10 13:24:33 -0500 (Mon, 10 Feb 2003) | 7 lines
+
+ - Clean up top comments
+ - Can use perl 5.005 although not yet tested
+ - Implement queuestatus
+ - printfile can now take filename as argument
+ - Added destroy method
+ - Added perl documentation for perldoc
+
+------------------------------------------------------------------------
+r23 | cfuhrman | 2003-02-10 13:18:40 -0500 (Mon, 10 Feb 2003) | 2 lines
+
+ - Now support queuestatus
+
+------------------------------------------------------------------------
+r22 | cfuhrman | 2003-02-09 21:35:37 -0500 (Sun, 09 Feb 2003) | 2 lines
+
+ - New copyright notice about dual-license
+
+------------------------------------------------------------------------
+r21 | cfuhrman | 2003-02-09 21:05:23 -0500 (Sun, 09 Feb 2003) | 2 lines
+
+ - Update with latest files
+
+------------------------------------------------------------------------
+r20 | cfuhrman | 2003-02-09 21:04:46 -0500 (Sun, 09 Feb 2003) | 2 lines
+
+ - New re-written version
+
+------------------------------------------------------------------------
+r19 | cfuhrman | 2003-02-09 21:04:31 -0500 (Sun, 09 Feb 2003) | 2 lines
+
+ - Initial entry
+
+------------------------------------------------------------------------
+r18 | cfuhrman | 2003-02-09 21:03:12 -0500 (Sun, 09 Feb 2003) | 2 lines
+
+ - Latest todo list
+
+------------------------------------------------------------------------
+r17 | cfuhrman | 2003-02-09 20:56:21 -0500 (Sun, 09 Feb 2003) | 2 lines
+
+ - Initial entry
+
+------------------------------------------------------------------------
+r14 | cfuhrman | 2001-03-11 11:46:27 -0500 (Sun, 11 Mar 2001) | 2 lines
+
+ - Initial entry
+
+------------------------------------------------------------------------
+r13 | cfuhrman | 2001-03-11 11:46:11 -0500 (Sun, 11 Mar 2001) | 2 lines
+
+ - Added Cygwin Port (Neil Lunn)
+
+------------------------------------------------------------------------
+r12 | cfuhrman | 2001-03-11 11:43:33 -0500 (Sun, 11 Mar 2001) | 5 lines
+
+ - Checked the current OS for use of getpwdent().  This is a problem
+   on non *nix architectures. (Neil Lunn)
+ - Solve the sprintf problem.  $result from sysread can be returned as
+   undef.  When it is we set it to 0. (Neil Lunn)
+
+------------------------------------------------------------------------
+r10 | cfuhrman | 2000-06-07 17:23:42 -0400 (Wed, 07 Jun 2000) | 2 lines
+
+ - Added note about sprintf problem
+
+------------------------------------------------------------------------
+r9 | cfuhrman | 2000-06-07 17:22:38 -0400 (Wed, 07 Jun 2000) | 3 lines
+
+ - Added Sun SPARC to list of tested machines.
+ - Added BUGS section
+
+------------------------------------------------------------------------
+r8 | cfuhrman | 2000-06-07 17:20:39 -0400 (Wed, 07 Jun 2000) | 2 lines
+
+ - Added TODO
+
+------------------------------------------------------------------------
+r7 | cfuhrman | 2000-06-07 17:20:18 -0400 (Wed, 07 Jun 2000) | 2 lines
+
+ - Added sprintf comment
+
+------------------------------------------------------------------------
+r6 | cfuhrman | 2000-06-07 17:19:53 -0400 (Wed, 07 Jun 2000) | 4 lines
+
+ - Fixed bug where perl -w complains a blank string is being used with
+   an ne (Not Equal To) operator.  Please note that a couple of
+   sprintf's generate the same warning.
+
+------------------------------------------------------------------------
+r5 | cfuhrman | 2000-06-07 17:17:53 -0400 (Wed, 07 Jun 2000) | 2 lines
+
+ - Initial Entry based
+
+------------------------------------------------------------------------
+r4 | cfuhrman | 2000-06-06 17:12:08 -0400 (Tue, 06 Jun 2000) | 2 lines
+
+ - Initial Entry
+
+------------------------------------------------------------------------
+r3 | cfuhrman | 2000-06-06 17:09:40 -0400 (Tue, 06 Jun 2000) | 2 lines
+
+ - Initial entry into repository
+
+------------------------------------------------------------------------
+r2 | cfuhrman | 2000-06-06 17:08:51 -0400 (Tue, 06 Jun 2000) | 2 lines
+
+ - New revision replaces LinePrinter.pm module
+
+------------------------------------------------------------------------
+r1 | (no author) | 2000-06-06 17:08:51 -0400 (Tue, 06 Jun 2000) | 1 line
+
+New repository initialized by cvs2svn.
+------------------------------------------------------------------------

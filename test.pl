@@ -3,7 +3,7 @@
 # `make test'. After `make install' it should work as `perl test.pl'
 
 #
-# $Id: test.pl,v 1.4 2003/02/19 02:03:10 cfuhrman Exp $
+# $Id: test.pl 53 2004-11-27 18:39:01Z cfuhrman $
 #
 
 #########################
@@ -12,6 +12,7 @@
 
 use Test;
 BEGIN { plan tests => 1 };
+use lib "lib";
 use Net::Printer;
 ok(1); # If we made it this far, we're ok.
 
