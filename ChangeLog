@@ -1,0 +1,35 @@
+2000-06-07  Chris Fuhrman  <cfuhrman@cfuhrman.ee.net>
+
+	* Printer.pm:  - Added note about sprintf problem
+
+	* README:  - Added Sun SPARC to list of tested machines.
+	 - Added BUGS section
+
+	* MANIFEST:  - Added TODO
+
+	* TODO:  - Added sprintf comment
+
+	* Printer.pm:
+	 - Fixed bug where perl -w complains a blank string is being used with
+	   an ne (Not Equal To) operator.  Please note that a couple of
+	   sprintf's generate the same warning.
+
+	* TODO:  - Initial Entry based
+
+2000-06-06  Chris Fuhrman  <cfuhrman@cfuhrman.ee.net>
+
+	* Makefile.PL, README:  - Initial Entry
+
+	* MANIFEST, COPYRIGHT:  - Initial entry into repository
+
+	* Printer.pm:  - New revision replaces LinePrinter.pm module
+
+2000-06-06  Chris Fuhrman  <cfuhrman@cfuhrman.ee.net>
+
+	* Makefile.PL, README:  - Initial Entry
+
+	* MANIFEST, COPYRIGHT:  - Initial entry into repository
+
+	* Printer.pm:  - New revision replaces LinePrinter.pm module
+
+
