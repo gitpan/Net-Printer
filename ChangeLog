@@ -1,3 +1,15 @@
+2001-03-11  Chris Fuhrman  <cfuhrman@alleyn.beartribe.org>
+
+	* CREDITS:  - Initial entry
+
+	* README:  - Added Cygwin Port (Neil Lunn)
+
+	* Printer.pm:
+	 - Checked the current OS for use of getpwdent().  This is a problem
+	   on non *nix architectures. (Neil Lunn)
+	 - Solve the sprintf problem.  $result from sysread can be returned as
+	   undef.  When it is we set it to 0. (Neil Lunn)
+
 2000-06-07  Chris Fuhrman  <cfuhrman@cfuhrman.ee.net>
 
 	* Printer.pm:  - Added note about sprintf problem
