@@ -1,129 +1,244 @@
-------------------------------------------------------------------------
-r62 | cfuhrman | 2005-03-20 11:47:05 -0500 (Sun, 20 Mar 2005) | 3 lines
+2005-08-08 02:33  cfuhrman
 
- - Format for X-Emacs CPerl mode (Note usage of BSD Style of indents)
+	* trunk/lib/Net/Printer.pm: - Add additional commenting - When we're
+	  checking for data in our buffer, make sure we get a valid
+	  response. - Some minor POD clean-up.
 
+2005-03-20 16:50  cfuhrman
 
-------------------------------------------------------------------------
-r59 | cfuhrman | 2005-02-10 21:02:20 -0500 (Thu, 10 Feb 2005) | 4 lines
+	* trunk/README: - Tested under Microsoft Services for UNIX
 
- - Make sure sprintf is getting all necessary value(s) when calling
-   _logDebug
+2005-03-20 16:47  cfuhrman
 
+	* trunk/lib/Net/Printer.pm, trunk/test.pl: - Format for X-Emacs
+	  CPerl mode (Note usage of BSD Style of indents)
 
-------------------------------------------------------------------------
-r57 | cfuhrman | 2004-12-01 17:39:26 -0500 (Wed, 01 Dec 2004) | 3 lines
+2005-02-11 02:02  cfuhrman
 
- - Don't use getpwent which isn't implemented under MSWin32
+	* trunk/Makefile.PL: - Change author. I think I know who I am ;)
 
+2005-02-11 02:02  cfuhrman
 
-------------------------------------------------------------------------
-r52 | cfuhrman | 2004-11-27 13:36:23 -0500 (Sat, 27 Nov 2004) | 4 lines
+	* trunk/lib/Net/Printer.pm: - Make sure sprintf is getting all
+	  necessary value(s) when calling _logDebug
 
- - Bump up to version 1.00
- - Change Makefile dependencies and location of module
+2004-12-01 22:39  cfuhrman
 
+	* trunk/CREDITS, trunk/lib/Net/Printer.pm: - Don't use getpwent
+	  which isn't implemented under MSWin32
 
-------------------------------------------------------------------------
-r48 | cfuhrman | 2004-11-25 13:09:02 -0500 (Thu, 25 Nov 2004) | 5 lines
+2004-11-27 18:52  cfuhrman
 
- - Re-organize code
- - Clean-up
- - Add section about CUPS printers to POD documentation
+	* trunk/META.yml: - Initial revision
 
+2004-11-27 18:39  cfuhrman
 
-------------------------------------------------------------------------
-r47 | cfuhrman | 2004-11-25 11:58:59 -0500 (Thu, 25 Nov 2004) | 4 lines
+	* trunk/test.pl: - disable debuggery in test.pl
 
- - Objectify Code.
- - Change Debuggery
+2004-11-27 18:36  cfuhrman
 
+	* trunk/MANIFEST, trunk/Makefile.PL, trunk/lib/Net/Printer.pm: -
+	  Bump up to version 1.00 - Change Makefile dependencies and
+	  location of module
 
-------------------------------------------------------------------------
-r46 | cfuhrman | 2004-11-25 07:35:46 -0500 (Thu, 25 Nov 2004) | 12 lines
+2004-11-27 18:32  cfuhrman
 
- - Use NaturalDocs markups in code
- - Code sanitisatioin
- - Debug now prints calling function and line number
- - Begin to rename private functions using _functionName schema
- - _logDebug & _lpdFatal are now more Object Oriented.
- - We don't need the autoloader
- - Move Printer.pm to sub directory
- - test.pl now sets debug to "Yes"
- - Note this revision marks the switch to Subversion for my source
-   control needs
+	* trunk/COPYRIGHT, trunk/COPYRIGHT.BSD, trunk/COPYRIGHT.GNU,
+	  trunk/MANIFEST, trunk/README, trunk/README.v30: - Switch to BSD
+	  license
 
+2004-11-27 18:27  cfuhrman
 
-------------------------------------------------------------------------
-r44 | cfuhrman | 2004-10-18 21:34:45 -0400 (Mon, 18 Oct 2004) | 3 lines
+	* trunk/COPYRIGHT: - To be replaced by BSD version
 
- - Documentation clarification
+2004-11-27 18:27  cfuhrman
 
+	* trunk/COPYRIGHT.BSD: - We're in 2004 now
 
-------------------------------------------------------------------------
-r42 | cfuhrman | 2003-03-15 09:05:05 -0500 (Sat, 15 Mar 2003) | 5 lines
+2004-11-25 18:09  cfuhrman
 
- - New function printerror in the event Net::Printer finds an error
- - Cleaned up debugging
- - Export functions properly
- - queuestatus is now more consistent in returning array
+	* trunk/lib/Net/Printer.pm: - Re-organize code - Clean-up - Add
+	  section about CUPS printers to POD documentation
 
-------------------------------------------------------------------------
-r39 | cfuhrman | 2003-02-20 05:59:14 -0500 (Thu, 20 Feb 2003) | 2 lines
+2004-11-25 16:58  cfuhrman
 
- - Update version
+	* trunk/lib/Net/Printer.pm: - Objectify Code. - Change Debuggery
 
-------------------------------------------------------------------------
-r37 | cfuhrman | 2003-02-18 21:06:28 -0500 (Tue, 18 Feb 2003) | 5 lines
+2004-11-25 12:35  cfuhrman
 
- - Net::Printer definitely needs perl 5.6.0 or greater
- - Added rfc1179 compliance mode (thanks to selsky)
- - Removed extraneous whitespace in POD documentation
- - POD documentation clean-up
+	* trunk/Printer.pm, trunk/lib, trunk/lib/Net,
+	  trunk/lib/Net/Printer.pm, trunk/test.pl: - Use NaturalDocs markups
+	  in code - Code sanitisatioin - Debug now prints calling function
+	  and line number - Begin to rename private functions using
+	  _functionName schema - _logDebug & _lpdFatal are now more Object
+	  Oriented. - We don't need the autoloader - Move Printer.pm to sub
+	  directory - test.pl now sets debug to "Yes" - Note this revision
+	  marks the switch to Subversion for my source control needs
 
-------------------------------------------------------------------------
-r32 | cfuhrman | 2003-02-12 20:53:07 -0500 (Wed, 12 Feb 2003) | 2 lines
+2004-10-19 01:34  cfuhrman
 
- - Added printstring function
+	* trunk/Printer.pm: - Documentation clarification
 
-------------------------------------------------------------------------
-r24 | cfuhrman | 2003-02-10 13:24:33 -0500 (Mon, 10 Feb 2003) | 7 lines
+2003-03-15 14:05  cfuhrman
 
- - Clean up top comments
- - Can use perl 5.005 although not yet tested
- - Implement queuestatus
- - printfile can now take filename as argument
- - Added destroy method
- - Added perl documentation for perldoc
+	* trunk/Printer.pm: - New function printerror in the event
+	  Net::Printer finds an error - Cleaned up debugging - Export
+	  functions properly - queuestatus is now more consistent in
+	  returning array
 
-------------------------------------------------------------------------
-r20 | cfuhrman | 2003-02-09 21:04:46 -0500 (Sun, 09 Feb 2003) | 2 lines
+2003-02-23 15:28  cfuhrman
 
- - New re-written version
+	* trunk/testprint.txt: - A little humor...
 
-------------------------------------------------------------------------
-r12 | cfuhrman | 2001-03-11 11:43:33 -0500 (Sun, 11 Mar 2001) | 5 lines
+2003-02-20 10:59  cfuhrman
 
- - Checked the current OS for use of getpwdent().  This is a problem
-   on non *nix architectures. (Neil Lunn)
- - Solve the sprintf problem.  $result from sysread can be returned as
-   undef.  When it is we set it to 0. (Neil Lunn)
+	* trunk/Printer.pm: - Update version
 
-------------------------------------------------------------------------
-r10 | cfuhrman | 2000-06-07 17:23:42 -0400 (Wed, 07 Jun 2000) | 2 lines
+2003-02-20 10:56  cfuhrman
 
- - Added note about sprintf problem
+	* trunk/CREDITS: - Added Matt Selsky
 
-------------------------------------------------------------------------
-r6 | cfuhrman | 2000-06-07 17:19:53 -0400 (Wed, 07 Jun 2000) | 4 lines
+2003-02-19 02:06  cfuhrman
 
- - Fixed bug where perl -w complains a blank string is being used with
-   an ne (Not Equal To) operator.  Please note that a couple of
-   sprintf's generate the same warning.
+	* trunk/Printer.pm: - Net::Printer definitely needs perl 5.6.0 or
+	  greater - Added rfc1179 compliance mode (thanks to selsky) -
+	  Removed extraneous whitespace in POD documentation - POD
+	  documentation clean-up
 
-------------------------------------------------------------------------
-r2 | cfuhrman | 2000-06-06 17:08:51 -0400 (Tue, 06 Jun 2000) | 2 lines
+2003-02-19 02:03  cfuhrman
 
- - New revision replaces LinePrinter.pm module
+	* trunk/test.pl: - Fix potential name-space collision - Added
+	  rfc1179 default to "No"
 
-------------------------------------------------------------------------
+2003-02-13 01:54  cfuhrman
+
+	* trunk/TODO: - Added line about PRINTER environment variable
+
+2003-02-13 01:53  cfuhrman
+
+	* trunk/test.pl: - Added commented out test for printstring function
+
+2003-02-13 01:53  cfuhrman
+
+	* trunk/Printer.pm: - Added printstring function
+
+2003-02-12 14:45  cfuhrman
+
+	* trunk/TODO: - Only thing left to do that I can think of is
+	  failover to lpr/lp
+
+2003-02-12 14:42  cfuhrman
+
+	* trunk/MANIFEST: - Added README.v30
+
+2003-02-12 14:41  cfuhrman
+
+	* trunk/README: - Removed pointer to COPYRIGHT. People should read
+	  README.v30
+
+2003-02-12 14:41  cfuhrman
+
+	* trunk/README.v30: - Initial entry
+
+2003-02-10 18:38  cfuhrman
+
+	* trunk/COPYRIGHT: - Added e-mail addy
+
+2003-02-10 18:37  cfuhrman
+
+	* trunk/README: - Updated with new version 0.30 information
+
+2003-02-10 18:24  cfuhrman
+
+	* trunk/Printer.pm: - Clean up top comments - Can use perl 5.005
+	  although not yet tested - Implement queuestatus - printfile can
+	  now take filename as argument - Added destroy method - Added perl
+	  documentation for perldoc
+
+2003-02-10 18:18  cfuhrman
+
+	* trunk/test.pl: - Now support queuestatus
+
+2003-02-10 02:35  cfuhrman
+
+	* trunk/COPYRIGHT: - New copyright notice about dual-license
+
+2003-02-10 02:05  cfuhrman
+
+	* trunk/MANIFEST: - Update with latest files
+
+2003-02-10 02:04  cfuhrman
+
+	* trunk/Printer.pm: - New re-written version
+
+2003-02-10 02:04  cfuhrman
+
+	* trunk/COPYRIGHT.BSD, trunk/COPYRIGHT.GNU, trunk/Makefile.PL,
+	  trunk/testprint.txt: - Initial entry
+
+2003-02-10 02:03  cfuhrman
+
+	* trunk/TODO: - Latest todo list
+
+2003-02-10 01:56  cfuhrman
+
+	* trunk/test.pl: - Initial entry
+
+2001-03-11 16:46  cfuhrman
+
+	* trunk/CREDITS: - Initial entry
+
+2001-03-11 16:46  cfuhrman
+
+	* trunk/README: - Added Cygwin Port (Neil Lunn)
+
+2001-03-11 16:43  cfuhrman
+
+	* trunk/Printer.pm: - Checked the current OS for use of getpwdent().
+	  This is a problem on non *nix architectures. (Neil Lunn) - Solve
+	  the sprintf problem. $result from sysread can be returned as
+	  undef. When it is we set it to 0. (Neil Lunn)
+
+2000-06-07 21:23  cfuhrman
+
+	* trunk/Printer.pm: - Added note about sprintf problem
+
+2000-06-07 21:22  cfuhrman
+
+	* trunk/README: - Added Sun SPARC to list of tested machines. -
+	  Added BUGS section
+
+2000-06-07 21:20  cfuhrman
+
+	* trunk/MANIFEST: - Added TODO
+
+2000-06-07 21:20  cfuhrman
+
+	* trunk/TODO: - Added sprintf comment
+
+2000-06-07 21:19  cfuhrman
+
+	* trunk/Printer.pm: - Fixed bug where perl -w complains a blank
+	  string is being used with an ne (Not Equal To) operator. Please
+	  note that a couple of sprintf's generate the same warning.
+
+2000-06-07 21:17  cfuhrman
+
+	* trunk/TODO: - Initial Entry based
+
+2000-06-06 21:12  cfuhrman
+
+	* trunk/Makefile.PL, trunk/README: - Initial Entry
+
+2000-06-06 21:09  cfuhrman
+
+	* trunk/COPYRIGHT, trunk/MANIFEST: - Initial entry into repository
+
+2000-06-06 21:08  cfuhrman
+
+	* trunk/Printer.pm: - New revision replaces LinePrinter.pm module
+
+2000-06-06 21:08  
+
+	* branches, tags, trunk: New repository initialized by cvs2svn.
+
