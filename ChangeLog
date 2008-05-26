@@ -1,244 +1,171 @@
-2005-08-08 02:33  cfuhrman
+2006-06-01  cfuhrman
 
-	* trunk/lib/Net/Printer.pm: - Add additional commenting - When we're
-	  checking for data in our buffer, make sure we get a valid
-	  response. - Some minor POD clean-up.
+	* [r70] lib/Net/Printer.pm, test.pl: Revert previous merge
+	* [r69] lib/Net/Printer.pm, test.pl: Revert previous two commits
+	  (-r68:65)
 
-2005-03-20 16:50  cfuhrman
+2006-05-27  cfuhrman
 
-	* trunk/README: - Tested under Microsoft Services for UNIX
+	* [r68] lib/Net/Printer.pm, test.pl: Run code through perltidy for
+	  consistency
 
-2005-03-20 16:47  cfuhrman
+2006-04-02  cfuhrman
 
-	* trunk/lib/Net/Printer.pm, trunk/test.pl: - Format for X-Emacs
-	  CPerl mode (Note usage of BSD Style of indents)
+	* [r67] lib/Net/Printer.pm: Formatting ...
 
-2005-02-11 02:02  cfuhrman
+2005-08-08  cfuhrman
 
-	* trunk/Makefile.PL: - Change author. I think I know who I am ;)
+	* [r65] lib/Net/Printer.pm: - Add additional commenting
+	  - When we're checking for data in our buffer, make sure we get a
+	  valid response.
+	  - Some minor POD clean-up.
 
-2005-02-11 02:02  cfuhrman
+2005-03-20  cfuhrman
 
-	* trunk/lib/Net/Printer.pm: - Make sure sprintf is getting all
-	  necessary value(s) when calling _logDebug
+	* [r63] README: - Tested under Microsoft Services for UNIX
+	* [r62] lib/Net/Printer.pm, test.pl: - Format for X-Emacs CPerl
+	  mode (Note usage of BSD Style of indents)
 
-2004-12-01 22:39  cfuhrman
+2005-02-11  cfuhrman
 
-	* trunk/CREDITS, trunk/lib/Net/Printer.pm: - Don't use getpwent
-	  which isn't implemented under MSWin32
+	* [r60] Makefile.PL: - Change author. I think I know who I am ;)
+	* [r59] lib/Net/Printer.pm: - Make sure sprintf is getting all
+	  necessary value(s) when calling
+	  _logDebug
 
-2004-11-27 18:52  cfuhrman
+2004-12-01  cfuhrman
 
-	* trunk/META.yml: - Initial revision
+	* [r57] CREDITS, lib/Net/Printer.pm: - Don't use getpwent which
+	  isn't implemented under MSWin32
 
-2004-11-27 18:39  cfuhrman
+2004-11-27  cfuhrman
 
-	* trunk/test.pl: - disable debuggery in test.pl
+	* [r55] META.yml: - Initial revision
+	* [r53] test.pl: - disable debuggery in test.pl
+	* [r52] MANIFEST, Makefile.PL, lib/Net/Printer.pm: - Bump up to
+	  version 1.00
+	  - Change Makefile dependencies and location of module
+	* [r51] COPYRIGHT, COPYRIGHT.BSD, COPYRIGHT.GNU, MANIFEST, README,
+	  README.v30: - Switch to BSD license
+	* [r50] COPYRIGHT: - To be replaced by BSD version
+	* [r49] COPYRIGHT.BSD: - We're in 2004 now
 
-2004-11-27 18:36  cfuhrman
+2004-11-25  cfuhrman
 
-	* trunk/MANIFEST, trunk/Makefile.PL, trunk/lib/Net/Printer.pm: -
-	  Bump up to version 1.00 - Change Makefile dependencies and
-	  location of module
+	* [r48] lib/Net/Printer.pm: - Re-organize code
+	  - Clean-up
+	  - Add section about CUPS printers to POD documentation
+	* [r47] lib/Net/Printer.pm: - Objectify Code.
+	  - Change Debuggery
+	* [r46] Printer.pm, lib, lib/Net, lib/Net/Printer.pm, test.pl: -
+	  Use NaturalDocs markups in code
+	  - Code sanitisatioin
+	  - Debug now prints calling function and line number
+	  - Begin to rename private functions using _functionName schema
+	  - _logDebug & _lpdFatal are now more Object Oriented.
+	  - We don't need the autoloader
+	  - Move Printer.pm to sub directory
+	  - test.pl now sets debug to "Yes"
+	  - Note this revision marks the switch to Subversion for my source
+	  control needs
 
-2004-11-27 18:32  cfuhrman
+2004-10-19  cfuhrman
 
-	* trunk/COPYRIGHT, trunk/COPYRIGHT.BSD, trunk/COPYRIGHT.GNU,
-	  trunk/MANIFEST, trunk/README, trunk/README.v30: - Switch to BSD
-	  license
+	* [r44] Printer.pm: - Documentation clarification
 
-2004-11-27 18:27  cfuhrman
+2003-03-15  cfuhrman
 
-	* trunk/COPYRIGHT: - To be replaced by BSD version
+	* [r42] Printer.pm: - New function printerror in the event
+	  Net::Printer finds an error
+	  - Cleaned up debugging
+	  - Export functions properly
+	  - queuestatus is now more consistent in returning array
 
-2004-11-27 18:27  cfuhrman
+2003-02-23  cfuhrman
 
-	* trunk/COPYRIGHT.BSD: - We're in 2004 now
+	* [r41] testprint.txt: - A little humor...
 
-2004-11-25 18:09  cfuhrman
+2003-02-20  cfuhrman
 
-	* trunk/lib/Net/Printer.pm: - Re-organize code - Clean-up - Add
-	  section about CUPS printers to POD documentation
+	* [r39] Printer.pm: - Update version
+	* [r38] CREDITS: - Added Matt Selsky
 
-2004-11-25 16:58  cfuhrman
+2003-02-19  cfuhrman
 
-	* trunk/lib/Net/Printer.pm: - Objectify Code. - Change Debuggery
+	* [r37] Printer.pm: - Net::Printer definitely needs perl 5.6.0 or
+	  greater
+	  - Added rfc1179 compliance mode (thanks to selsky)
+	  - Removed extraneous whitespace in POD documentation
+	  - POD documentation clean-up
+	* [r36] test.pl: - Fix potential name-space collision
+	  - Added rfc1179 default to "No"
 
-2004-11-25 12:35  cfuhrman
+2003-02-13  cfuhrman
 
-	* trunk/Printer.pm, trunk/lib, trunk/lib/Net,
-	  trunk/lib/Net/Printer.pm, trunk/test.pl: - Use NaturalDocs markups
-	  in code - Code sanitisatioin - Debug now prints calling function
-	  and line number - Begin to rename private functions using
-	  _functionName schema - _logDebug & _lpdFatal are now more Object
-	  Oriented. - We don't need the autoloader - Move Printer.pm to sub
-	  directory - test.pl now sets debug to "Yes" - Note this revision
-	  marks the switch to Subversion for my source control needs
+	* [r34] TODO: - Added line about PRINTER environment variable
+	* [r33] test.pl: - Added commented out test for printstring
+	  function
+	* [r32] Printer.pm: - Added printstring function
 
-2004-10-19 01:34  cfuhrman
+2003-02-12  cfuhrman
 
-	* trunk/Printer.pm: - Documentation clarification
-
-2003-03-15 14:05  cfuhrman
-
-	* trunk/Printer.pm: - New function printerror in the event
-	  Net::Printer finds an error - Cleaned up debugging - Export
-	  functions properly - queuestatus is now more consistent in
-	  returning array
-
-2003-02-23 15:28  cfuhrman
-
-	* trunk/testprint.txt: - A little humor...
-
-2003-02-20 10:59  cfuhrman
-
-	* trunk/Printer.pm: - Update version
-
-2003-02-20 10:56  cfuhrman
-
-	* trunk/CREDITS: - Added Matt Selsky
-
-2003-02-19 02:06  cfuhrman
-
-	* trunk/Printer.pm: - Net::Printer definitely needs perl 5.6.0 or
-	  greater - Added rfc1179 compliance mode (thanks to selsky) -
-	  Removed extraneous whitespace in POD documentation - POD
-	  documentation clean-up
-
-2003-02-19 02:03  cfuhrman
-
-	* trunk/test.pl: - Fix potential name-space collision - Added
-	  rfc1179 default to "No"
-
-2003-02-13 01:54  cfuhrman
-
-	* trunk/TODO: - Added line about PRINTER environment variable
-
-2003-02-13 01:53  cfuhrman
-
-	* trunk/test.pl: - Added commented out test for printstring function
-
-2003-02-13 01:53  cfuhrman
-
-	* trunk/Printer.pm: - Added printstring function
-
-2003-02-12 14:45  cfuhrman
-
-	* trunk/TODO: - Only thing left to do that I can think of is
+	* [r31] TODO: - Only thing left to do that I can think of is
 	  failover to lpr/lp
-
-2003-02-12 14:42  cfuhrman
-
-	* trunk/MANIFEST: - Added README.v30
-
-2003-02-12 14:41  cfuhrman
-
-	* trunk/README: - Removed pointer to COPYRIGHT. People should read
+	* [r30] MANIFEST: - Added README.v30
+	* [r29] README: - Removed pointer to COPYRIGHT. People should read
 	  README.v30
+	* [r28] README.v30: - Initial entry
 
-2003-02-12 14:41  cfuhrman
+2003-02-10  cfuhrman
 
-	* trunk/README.v30: - Initial entry
+	* [r26] COPYRIGHT: - Added e-mail addy
+	* [r25] README: - Updated with new version 0.30 information
+	* [r24] Printer.pm: - Clean up top comments
+	  - Can use perl 5.005 although not yet tested
+	  - Implement queuestatus
+	  - printfile can now take filename as argument
+	  - Added destroy method
+	  - Added perl documentation for perldoc
+	* [r23] test.pl: - Now support queuestatus
+	* [r22] COPYRIGHT: - New copyright notice about dual-license
+	* [r21] MANIFEST: - Update with latest files
+	* [r20] Printer.pm: - New re-written version
+	* [r19] COPYRIGHT.BSD, COPYRIGHT.GNU, Makefile.PL, testprint.txt: -
+	  Initial entry
+	* [r18] TODO: - Latest todo list
+	* [r17] test.pl: - Initial entry
 
-2003-02-10 18:38  cfuhrman
+2001-03-11  cfuhrman
 
-	* trunk/COPYRIGHT: - Added e-mail addy
-
-2003-02-10 18:37  cfuhrman
-
-	* trunk/README: - Updated with new version 0.30 information
-
-2003-02-10 18:24  cfuhrman
-
-	* trunk/Printer.pm: - Clean up top comments - Can use perl 5.005
-	  although not yet tested - Implement queuestatus - printfile can
-	  now take filename as argument - Added destroy method - Added perl
-	  documentation for perldoc
-
-2003-02-10 18:18  cfuhrman
-
-	* trunk/test.pl: - Now support queuestatus
-
-2003-02-10 02:35  cfuhrman
-
-	* trunk/COPYRIGHT: - New copyright notice about dual-license
-
-2003-02-10 02:05  cfuhrman
-
-	* trunk/MANIFEST: - Update with latest files
-
-2003-02-10 02:04  cfuhrman
-
-	* trunk/Printer.pm: - New re-written version
-
-2003-02-10 02:04  cfuhrman
-
-	* trunk/COPYRIGHT.BSD, trunk/COPYRIGHT.GNU, trunk/Makefile.PL,
-	  trunk/testprint.txt: - Initial entry
-
-2003-02-10 02:03  cfuhrman
-
-	* trunk/TODO: - Latest todo list
-
-2003-02-10 01:56  cfuhrman
-
-	* trunk/test.pl: - Initial entry
-
-2001-03-11 16:46  cfuhrman
-
-	* trunk/CREDITS: - Initial entry
-
-2001-03-11 16:46  cfuhrman
-
-	* trunk/README: - Added Cygwin Port (Neil Lunn)
-
-2001-03-11 16:43  cfuhrman
-
-	* trunk/Printer.pm: - Checked the current OS for use of getpwdent().
-	  This is a problem on non *nix architectures. (Neil Lunn) - Solve
-	  the sprintf problem. $result from sysread can be returned as
+	* [r14] CREDITS: - Initial entry
+	* [r13] README: - Added Cygwin Port (Neil Lunn)
+	* [r12] Printer.pm: - Checked the current OS for use of
+	  getpwdent(). This is a problem
+	  on non *nix architectures. (Neil Lunn)
+	  - Solve the sprintf problem. $result from sysread can be returned
+	  as
 	  undef. When it is we set it to 0. (Neil Lunn)
 
-2000-06-07 21:23  cfuhrman
+2000-06-07  cfuhrman
 
-	* trunk/Printer.pm: - Added note about sprintf problem
+	* [r10] Printer.pm: - Added note about sprintf problem
+	* [r9] README: - Added Sun SPARC to list of tested machines.
+	  - Added BUGS section
+	* [r8] MANIFEST: - Added TODO
+	* [r7] TODO: - Added sprintf comment
+	* [r6] Printer.pm: - Fixed bug where perl -w complains a blank
+	  string is being used with
+	  an ne (Not Equal To) operator. Please note that a couple of
+	  sprintf's generate the same warning.
+	* [r5] TODO: - Initial Entry based
 
-2000-06-07 21:22  cfuhrman
+2000-06-06  cfuhrman
 
-	* trunk/README: - Added Sun SPARC to list of tested machines. -
-	  Added BUGS section
+	* [r4] Makefile.PL, README: - Initial Entry
+	* [r3] COPYRIGHT, MANIFEST: - Initial entry into repository
+	* [r2] Printer.pm: - New revision replaces LinePrinter.pm module
 
-2000-06-07 21:20  cfuhrman
+2000-06-06  
 
-	* trunk/MANIFEST: - Added TODO
-
-2000-06-07 21:20  cfuhrman
-
-	* trunk/TODO: - Added sprintf comment
-
-2000-06-07 21:19  cfuhrman
-
-	* trunk/Printer.pm: - Fixed bug where perl -w complains a blank
-	  string is being used with an ne (Not Equal To) operator. Please
-	  note that a couple of sprintf's generate the same warning.
-
-2000-06-07 21:17  cfuhrman
-
-	* trunk/TODO: - Initial Entry based
-
-2000-06-06 21:12  cfuhrman
-
-	* trunk/Makefile.PL, trunk/README: - Initial Entry
-
-2000-06-06 21:09  cfuhrman
-
-	* trunk/COPYRIGHT, trunk/MANIFEST: - Initial entry into repository
-
-2000-06-06 21:08  cfuhrman
-
-	* trunk/Printer.pm: - New revision replaces LinePrinter.pm module
-
-2000-06-06 21:08  
-
-	* branches, tags, trunk: New repository initialized by cvs2svn.
+	* [r1] .: New repository initialized by cvs2svn.
 

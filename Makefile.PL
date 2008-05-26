@@ -1,7 +1,7 @@
 use ExtUtils::MakeMaker;
 
 #
-# $Id: Makefile.PL 60 2005-02-11 02:02:39Z cfuhrman $
+# $Id: Makefile.PL 71 2008-05-26 17:32:13Z cfuhrman $
 #
 
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
@@ -12,5 +12,5 @@ WriteMakefile(
     'PREREQ_PM'		=> {}, # e.g., Module::Name => 1.1
     ($] >= 5.006 ?    ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM => 'lib/Net/Printer.pm', # retrieve abstract from module
-       AUTHOR     => 'Chris Fuhrman <chris.fuhrman@tfcci.com>') : ()),
+       AUTHOR     => 'Chris Fuhrman <cfuhrman@panix.com>') : ()),
 );

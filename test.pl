@@ -3,7 +3,7 @@
 # `make test'. After `make install' it should work as `perl test.pl'
 
 #
-# $Id: test.pl 62 2005-03-20 16:47:05Z cfuhrman $
+# $Id: test.pl 70 2006-06-01 01:47:42Z cfuhrman $
 #
 
 #########################
@@ -11,40 +11,42 @@
 # change 'tests => 1' to 'tests => last_test_to_print';
 
 use Test;
-BEGIN { plan tests => 1 };
+BEGIN { plan tests => 1 }
 use lib "lib";
 use Net::Printer;
-ok(1); # If we made it this far, we're ok.
+ok( 1 );        # If we made it this far, we're ok.
 
 #########################
 
 # Insert your test code below, the Test module is use()ed here so read
 # its man page ( perldoc Test ) for help writing this test script.
 
-main : {
+main:
+{
 
     $printer = Net::Printer->new( "lineconvert" => "Yes",
                                   "server"      => "localhost",
                                   "printer"     => "lp",
                                   "rfc1179"     => "No",
-                                  "debug"       => "No");
+                                  "debug"       => "No" );
 
-    ok( defined ($printer) );
+    ok( defined( $printer ) );
 
-    ok (defined $printer->printfile("./testprint.txt") );
+    ok( defined $printer->printfile( "./testprint.txt" ) );
 
     @status = $printer->queuestatus();
 
-    foreach $line (@status) {
+    foreach $line ( @status )
+    {
         $line =~ s/\n//;
         print "$line\n";
     }
 
-    ok (defined @status);
+    ok( defined @status );
 
-    # Uncomment this if you want to test printstring
-    # ok (defined $printer->printstring("This is a test of printstring function\n"));
+# Uncomment this if you want to test printstring
+# ok (defined $printer->printstring("This is a test of printstring function\n"));
 
     print "Please check your default printer for printout.\n";
 
-} # main
+}        # main
