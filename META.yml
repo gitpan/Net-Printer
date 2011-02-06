@@ -1,10 +1,25 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Net-Printer
-version:      1.05
-version_from: lib/Net/Printer.pm
-installdirs:  site
-requires:
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30
+--- #YAML:1.0
+name:               Net-Printer
+version:            1.11
+abstract:           Perl extension for direct-to-lpd printing.
+author:
+    - Christopher M. Fuhrman <cfuhrman@panix.com>
+license:            bsd
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
+requires:  {}
+resources:
+    bugtracker:  http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Net-Printer
+    license:     https://github.com/cfuhrman/net-printer/raw/master/LICENSE
+    repository:  https://github.com/cfuhrman/net-printer
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.56
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4
