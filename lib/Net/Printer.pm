@@ -58,12 +58,12 @@ our @ISA = qw( Exporter );
 use 5.006;
 
 use Carp;
+use File::Temp;
 use FileHandle;
 use IO::Socket;
-use POSIX qw ( tmpnam );
 use Sys::Hostname;
 
-our $VERSION = '1.11';
+our $VERSION = '1.12';
 
 # Exported functions
 our @EXPORT = qw( printerror printfile printstring queuestatus );
@@ -445,7 +445,6 @@ sub _lpdFatal
 
 }          # _lpdFatal()
 
-# Preloaded methods go here.
 # Method: _tmpfile
 #
 # Creates temporary file returning its name.
@@ -459,19 +458,16 @@ sub _lpdFatal
 #   name of temporary file
 sub _tmpfile
 {
-        my $name;
-        my $fh;
+
         my $self = shift;
 
-        # try new temporary filenames until we get one that didn't already
-        # exist
-        do { $name = tmpnam() }
-            until $fh = IO::File->new($name, O_RDWR | O_CREAT | O_EXCL);
+        my $fh    = File::Temp->new();
+        my $fname = $fh->filename;
 
         # Clean up
         $fh->close();
 
-        return $name;
+        return $fname
 
 }          # _tmpfile()
 
@@ -697,17 +693,17 @@ sub _lpdCommand
 #   1 on success, undef on fail
 sub _lpdInit
 {
-        my $buf;
-        my $retcode;
-
         my $self = shift;
+
+        my $buf     = "";
+        my $retcode = 1;
 
         $self->_logDebug("invoked ... ");
 
         # Create and send ready
-        $buf = sprintf("%c%s\n", 2, $self->{printer});
+        $buf = sprintf("%c%s\n", 2, $self->{printer}) || "";
         $buf = $self->_lpdCommand($buf, 1);
-        $retcode = unpack("c", $buf);
+        $retcode = unpack("c", $buf || 1);
 
         $self->_logDebug("Return code is $retcode");
 
@@ -721,7 +717,7 @@ sub _lpdInit
                 $self->_lpdFatal(
                                  sprintf("Printer %s on Server %s not okay",
                                          $self->{printer}, $self->{server}));
-                $self->_logDebug(sprintf("Printer said %s", $buf));
+                $self->_logDebug(sprintf("Printer said %s", $buf || "nothing"));
 
                 return undef;
         }
@@ -900,11 +896,11 @@ Christopher M. Fuhrman C<< <cfuhrman at panix.com> >>
 
 =head1 REVISION INFORMATION
 
-  $Id: 24489f5c582d84f45aaba799eec85819234a6549 $
+  $Id: 9044ee617cffd95213cff21af410d8ea1dc3f1fd $
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright (c) 2000-2004 Christopher M. Fuhrman, 
+Copyright (c) 2000-2005,2008,2011,2013 Christopher M. Fuhrman, 
 All rights reserved.
 
 This program is free software licensed under the...
